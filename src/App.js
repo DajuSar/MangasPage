@@ -2,10 +2,12 @@ import { Route, Switch } from "react-router-dom";
 import AllMangas from "./pages/AllMangas";
 import ShowChapter from "./pages/ShowChapter";
 import SingleManga from "./pages/SingleManga";
+import NavigationBar from './components/layout/NavigationBar'
 
 function App() {
   return (
     <div>
+      <NavigationBar />
       <Switch>
         <Route path='/' exact>
           <AllMangas />
