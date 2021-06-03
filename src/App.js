@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <Switch>
-        <Route path='/'>
+        <Route path='/' exact>
           <AllMangas />
         </Route>
         <Route path="/SingleManga">
