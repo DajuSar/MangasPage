@@ -1,5 +1,5 @@
 import MangaItem from "./MangaItem";
-import classes from "./MangaItem";
+import classes from "./List.module.css";
 
 function MangaList(props) {
   return (

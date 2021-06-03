@@ -16,5 +16,6 @@
   .card {
     display: block;
     justify-content: center;
+    padding: 0;
   }
 }

@@ -1,11 +1,15 @@
+
+.header::before {
+  transition: all 1s;
+}
 .header {
+  z-index: 100;
   width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #77002e;
-  padding: 0 10%;
+  background-color: #77002e;  
 }
 
 .hideHeader {
@@ -53,14 +57,78 @@
   margin-left: 0.5rem;
 }
 
-/* @media only screen and (max-width: 1000px) {
+.responsiveNav {
+  display: none;
+}
+
+.buttonContainer {
+	position: relative;
+	width: 100%;
+	display: block;
+	z-index: 50;
+  transition: all 1s;
+  padding: 0;
+}
+
+.responsiveButton {
+  position: absolute;
+  list-style: none;
+	font-size: 25px;
+	left: -50px;
+	padding: 5px;
+}
+
+.responsiveNav:hover > .responsiveContainer{
+  display: flex;
+  top: 44px;
+  margin-bottom: 30px;
+  transition: all .5s;
+}
+
+.header:hover {
+  margin-bottom: 60px;
+  transition-delay: 1s;
+}
+
+@media only screen and (max-width: 1000px) {
   .header {
     justify-content: center;
     height: 50px;
     margin: auto;
+    transition: all 1s;
   }
+
   nav {
     display: none;
     position: relative;
   }
-} */
+
+  .responsiveNav {
+		display: block;
+		position: absolute;
+		height: 38px;
+		width: 100%;
+    transition: all 1s;
+  }
+
+  .responsiveContainer{
+    display: flex;
+    position: relative;
+    background-color: #77002e;
+    transition: all 1s;
+    z-index: -1;
+    top: -20px;
+  }
+  .responsiveContainer ul{
+    width: 100%;
+    display: block;
+    position: relative;
+  }
+
+  .responsiveContainer li{
+    list-style: none;
+    position: relative;
+    left: -40px;
+  }
+
+}
