@@ -7,9 +7,11 @@
 }
 
 .noflexcard {
+  justify-self: center;
   background-color: whitesmoke;
   border-radius: 6px;
   box-shadow: 0 1px 10px #f390b698;
+  width: 500px;
 }
 
 @media only screen and (max-width: 1000px) {

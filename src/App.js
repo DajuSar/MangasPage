@@ -3,6 +3,7 @@ import AllMangas from "./pages/AllMangas";
 import ShowChapter from "./pages/ShowChapter";
 import SingleManga from "./pages/SingleManga";
 import NavigationBar from './components/layout/NavigationBar'
+import NewManga from "./pages/NewManga";
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         </Route>
         <Route path="/ShowChapter">
           <ShowChapter />
+        </Route>
+        <Route path="/AddManga">
+          <NewManga />
         </Route>
       </Switch>
     </div>
