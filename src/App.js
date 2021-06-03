@@ -6,7 +6,6 @@ import SingleManga from "./pages/SingleManga";
 function App() {
   return (
     <div>
-      HOLAAAA
       <Switch>
         <Route path='/'>
           <AllMangas />
@@ -18,7 +17,6 @@ function App() {
           <ShowChapter />
         </Route>
       </Switch>
-      <AllMangas />
     </div>
   );
 }
