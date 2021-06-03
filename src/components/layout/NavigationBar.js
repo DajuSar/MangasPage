@@ -11,7 +11,7 @@ function NavigationBar() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/MyBookmarks">Mis Marcadores</Link>
+            <Link to="/MyBookmarks">Marcadores</Link>
           </li>
         </ul>
       </nav>
