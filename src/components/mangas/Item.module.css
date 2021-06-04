@@ -58,6 +58,11 @@
   margin: 20px;
 }
 
+.link{
+  text-decoration: none;
+  color: white;
+}
+
 .actions button:hover,
 .actions button:active {
   background-color: #e64985;

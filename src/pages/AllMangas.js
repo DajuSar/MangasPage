@@ -1,29 +1,59 @@
-import MangaList from '../components/mangas/MangaList'
+import MangaList from "../components/mangas/MangaList";
+import { useState, useEffect } from "react";
+import firebase from "firebase";
 
-const DUMMY_DATA = [
-    {
-      id: 'm1',
-      title: 'This is a first meetup',
-      image:
-        'https://tumanga.net/wp-content/uploads/23712_TMOManga58f9b5beb7b63-3294.jpg',
-      description:
-        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
-    },
-    {
-      id: 'm2',
-      title: 'This is a second meetup',
-      image:
-        'https://images-na.ssl-images-amazon.com/images/I/91dhxPo6lPL.jpg',
-      description:
-        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',
-    },
-  ];
+function AllMangas() {
+  const [loading, isLoading] = useState(true);
+  const [loadedMangas, setloadedMangas] = useState([]);
+  function modifyLoaded(value) {
+    setloadedMangas(value);
+  }
 
-function AllMangas(){
-    return <section>
-        <h1>Todos los Mangas</h1>
-        <MangaList mangas={DUMMY_DATA} />
+  async function deletemangaData(id) {
+    console.log("Ingresaste a eliminar manga data Allmetups");
+    firebase
+      .database()
+      .refFromURL("https://mangasite-b13fa-default-rtdb.firebaseio.com/mangas")
+      .child(id)
+      .remove();
+    alert("Post has been deleted please reload");
+  }
+
+  useEffect(() => {
+    isLoading(true);
+    fetch("https://mangasite-b13fa-default-rtdb.firebaseio.com/mangas.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const mangas = [];
+
+        for (const key in data) {
+          const manga = {
+            id: key,
+            ...data[key],
+          };
+          mangas.push(manga);
+        }
+        isLoading(false);
+        modifyLoaded(mangas);
+        
+      });
+  }, []); //The dependencies section must have an external value ex: props, the useState can be omitted
+
+  if (loading) {
+    return (
+      <section>
+        <h1>Loading...</h1>
+      </section>
+    );
+  }
+  return (
+    <section>
+      <h1>All mangas</h1>
+      <MangaList mangas={loadedMangas} deleteManga={deletemangaData} />
     </section>
+  );
 }
 
 export default AllMangas;

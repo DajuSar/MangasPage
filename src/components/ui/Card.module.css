@@ -4,6 +4,7 @@
   border-radius: 6px;
   box-shadow: 0 1px 10px #f390b698;
   text-align: center;
+  justify-content: center;
 }
 
 .noflexcard {

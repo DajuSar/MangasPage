@@ -19,6 +19,9 @@ const firebaseConfig = {
   measurementId: "G-WM10H0LDJ4",
 };
 
+require('firebase/app');
+require('firebase/auth');
+require('firebase/database');
 firebase.initializeApp(firebaseConfig);
 const storage = firebase.storage();
 export { storage, firebase as default };

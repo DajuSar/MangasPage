@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    margin: 10px 10px 15px 20px;
+    width: 1000px;
+    left: 50vh;
+}
+
+.description{
+    position: relative;
+    width: 100%;
+}
