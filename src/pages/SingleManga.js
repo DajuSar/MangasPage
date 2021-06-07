@@ -1,11 +1,16 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Card from "../components/ui/Card";
-import ShowChapter from "./ShowChapter";
+import ChaptersList from "../components/chapters/ChaptersList";
 import classes from "./SingleManga.module.css";
 
 function SingleManga(props) {
   const location = useLocation();
   const actualProps = location.state.data;
+
+  function addChapterData(chapterData) {
+    console.log(chapterData);
+    
+  }
 
   return (
     <section>
@@ -16,12 +21,24 @@ function SingleManga(props) {
           <div className={classes.description}>
             <p>{actualProps.description}</p>
             <br></br>
-            <p>Capitulos:</p>
+            <Link
+              to={{
+                pathname: "/NewChapter",
+                state: {
+                  data: actualProps,
+                },
+                data: {
+                  addFunction: addChapterData,
+                },
+              }}
+            >
+              <button className={classes.button}>Add Chapter</button>
+            </Link>
           </div>
         </Card>
       </div>
       <div>
-        <ShowChapter />
+        <ChaptersList />
       </div>
     </section>
   );

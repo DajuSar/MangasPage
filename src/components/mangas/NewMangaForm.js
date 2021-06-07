@@ -8,6 +8,7 @@ function NewMangaForm(props) {
 
   const titleRef = useRef();
   const descriptionRef = useRef();
+  
   function doSubmit(event) {
     event.preventDefault();
 
@@ -26,8 +27,7 @@ function NewMangaForm(props) {
 
   const handleChange = (e) => {
     if (e.target.files[0]) {
-      setImage(e.target.files[0]);
-      console.log(e.target.files[0]);
+      setImage(e.target.files[0]); 
     }
   };
 
@@ -50,7 +50,7 @@ function NewMangaForm(props) {
             <input type="file" onChange={handleChange}></input>
           </div>
           <div className={classes.control}>
-            <label htmlFor="description">Meetup Description</label>
+            <label htmlFor="description">Manga Description</label>
             <textarea
               id="description"
               required

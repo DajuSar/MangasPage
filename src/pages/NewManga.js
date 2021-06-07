@@ -1,9 +1,7 @@
 import NewMangaForm from "../components/mangas/NewMangaForm";
-import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 
 function NewManga() {
-  const history = useHistory();
   const storage = firebase.storage();
 
   function writeThumbnail(img, id) {

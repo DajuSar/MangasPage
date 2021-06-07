@@ -1,9 +1,10 @@
 import { Route, Switch } from "react-router-dom";
 import AllMangas from "./pages/AllMangas";
-import ShowChapter from "./pages/ShowChapter";
+import ShowChapter from "./components/chapters/ShowChapter";
 import SingleManga from "./pages/SingleManga";
 import NavigationBar from './components/layout/NavigationBar'
 import NewManga from "./pages/NewManga";
+import NewChapter from "./components/chapters/NewChapter";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/AddManga">
           <NewManga />
+        </Route>
+        <Route path="/NewChapter">
+          <NewChapter />
         </Route>
       </Switch>
     </div>

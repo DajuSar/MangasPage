@@ -2,10 +2,40 @@
     position: relative;
     margin: 10px 10px 15px 20px;
     width: 1000px;
-    left: 50vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .description{
     position: relative;
     width: 100%;
+}
+
+.button{
+    font: inherit;
+    cursor: pointer;
+    background-color: #ad2056;
+    color: #ebdddd;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #77002e;
+    border-radius: 4px;
+    font-weight: bold;
+
+}
+
+.button:hover,
+.button:active {
+  background-color: #e64985;
+  border-color: #a50e48;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .container{
+        width: auto;
+        left: 0;
+        padding: 1em;
+    }
 }

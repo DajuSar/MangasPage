@@ -3,7 +3,7 @@
   transition: all 1s;
 }
 .header {
-  z-index: 100;
+  z-index: 30;
   width: 100%;
   height: 5rem;
   display: flex;
@@ -84,11 +84,10 @@
 @media only screen and (max-width: 1000px) {
   .responsiveNav:hover > .responsiveContainer{
     display: flex;
-    top: 30px;
-    margin-bottom: 30px;
+    top: 40px;
     transition: all .5s;
   }
-  
+
   .header {
     justify-content: center;
     height: 50px;
@@ -98,7 +97,7 @@
   }
   
   .header:hover {
-    margin-bottom: 80px;
+    margin-bottom: 90px;
   }
 
   nav {
@@ -119,7 +118,6 @@
     position: relative;
     background-color: #77002e;
     transition: all 1s;
-    z-index: -1;
     top: -100px;
   }
   .responsiveContainer ul{

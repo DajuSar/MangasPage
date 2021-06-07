@@ -1,5 +1,5 @@
 function ShowChapter(){
-    return <div>ShowChapter</div>
+    return <div>SHOW CHAPTER</div>
 }
 
 export default ShowChapter;
