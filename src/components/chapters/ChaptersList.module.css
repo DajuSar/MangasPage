@@ -1,8 +1,25 @@
-.container{
-    position: relative;
-    margin: 10px 10px 15px 20px;
-    width: 1000px;
-    left: 0;
-    right: 0;
-    margin: auto;
+.container > h1{
+    color: #000 !important;
+}
+
+.list{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.h3{
+    color: #000;
+}
+
+.listContainer{
+    overflow: hidden;
+}
+@media only screen and (max-width: 1000px) {
+
+    .container{
+        width: auto;
+        left: 0;
+        padding: 1em;
+    }
 }

@@ -6,10 +6,9 @@ import classes from "./SingleManga.module.css";
 function SingleManga(props) {
   const location = useLocation();
   const actualProps = location.state.data;
-
+  
   function addChapterData(chapterData) {
     console.log(chapterData);
-    
   }
 
   return (
@@ -37,9 +36,16 @@ function SingleManga(props) {
           </div>
         </Card>
       </div>
-      <div>
-        <ChaptersList />
-      </div>
+      <section>
+        <div className={classes.container}>
+          <Card>
+            <div>
+              <h3>Lista de Capitulos</h3>
+              <ChaptersList data={actualProps}/>
+            </div>
+          </Card>
+        </div>
+      </section>
     </section>
   );
 }
