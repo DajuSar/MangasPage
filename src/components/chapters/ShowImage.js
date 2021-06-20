@@ -28,11 +28,9 @@ function ShowImage(props) {
     <div className={classes.container}>
       <div className={classes.imagesContainer}>
         {images.map((slide, index) => {
-          {
             return (
               <img src={slide.url} alt="image 01" className={classes.image} />
             );
-          }
         })}
       </div>
     </div>

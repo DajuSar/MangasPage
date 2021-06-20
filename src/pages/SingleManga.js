@@ -16,7 +16,7 @@ function SingleManga(props) {
       <h1>{actualProps.title}</h1>
       <div className={classes.container}>
         <Card>
-          <img src={location.state.imgUrl} alt={actualProps.title} />
+          <img src={location.state.imgUrl} alt={actualProps.title} className={classes.image}/>
           <div className={classes.description}>
             <p>{actualProps.description}</p>
             <br></br>
